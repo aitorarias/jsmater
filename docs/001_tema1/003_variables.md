@@ -39,3 +39,60 @@ Podemos combiar estas dos líneas y ponerlas en una única línea
 let mensaje = 'Hola'; 
 alert(mensaje); 
 ```
+Podemos establecer varias variables en una única línea 
+
+```javascript 
+let user = 'John', age = 25, message = 'Hello';
+```
+
+Esto podemos hacerlo, pero no lo recomendamos, por temas de legibilidad. De lo contrario, podemos hacerlo en varias líneas: 
+
+```javascript 
+let user = 'John', 
+    age = 25, 
+    message = 'Hello';
+```
+
+También podremos observar la presencia del ``var`` en algún repositorio o proyecto. Este hace lo mismo que let, pero de una manera ligeramente diferente. Lo veremos próximamente. 
+
+## Una anología 
+
+Imaginemos la variable como una caja para los datos, con un único nombre dentro. 
+Por ejemplo, la variable message puede ser imaginada como una caja llamada "message" con el valor de "Hello!" dentro de ella. 
+
+![Variable ejemplo](../../img/variable.png)
+
+Podemos poner cualquier valor dentro de la caja . 
+
+Podemos cambiarla tantas veces como queramos: 
+
+```javascript
+let message; 
+
+message = 'Hello"'; 
+
+message = 'World'; // valor cambiado
+
+alert (message);
+```
+
+Cuando cambiamos este valor, los antiguos datos son eliminados por la variable: 
+
+![Variable ejemplo](../../img/variable-change.png)
+
+También podemos declarar dos variables y copiar los datos de una dentro de otra: 
+
+```javascript 
+
+let hello = 'Hola Mundo'; 
+
+let message; 
+
+// copia "Hola Mundo" de la variable hello en message; 
+
+message = hello; 
+
+// ahora las dos variables almacenan los mismos datos 
+
+alert(hello); 
+alert(message); 
