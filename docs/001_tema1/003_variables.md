@@ -171,3 +171,25 @@ myBirthday = '01.01.2001'; // error, can't reassign the constant!
 
 Cuando un programador está seguro de que una variable nunca va a cambiar, lo podemos declarar como const para garantizar y comunicar este hecho a todo el mundo. 
 
+## Variables en mayúscula 
+
+Existe una práctica muy extendida de usar constantes como alias para valores difíciles de recordar que se conocen antes de la ejecución.
+
+Estas constantes se nombran usando letras mayúsculas y guiones bajos.
+
+```javascript 
+const COLOR_RED = "#F00";
+const COLOR_GREEN = "#0F0";
+const COLOR_BLUE = "#00F";
+const COLOR_ORANGE = "#FF7F00";
+
+// ...when we need to pick a color
+let color = COLOR_ORANGE;
+alert(color); // #FF7F00
+```
+
+Beneficios: 
+
+1. ``COLOR_ORANGE`` es mucho más fácil de recordar que "#FF7F00"
+2. Es mucho más fácil equivocarse en ``#FF7F00`` que ``COLOR_ORANGE``
+3. Cuando leemos el código, ``COLOR_ORANGE`` es mucho más significativo 
