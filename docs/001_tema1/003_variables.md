@@ -96,3 +96,78 @@ message = hello;
 
 alert(hello); 
 alert(message); 
+```
+
+*Es interesante notar que los lenguajes de programación funcionales, como Scala Erlang, prohíben cambiar los valores de las variables. En estos idiomas, una vez que el valor se almacena "en la caja", está ahí para siempre. Si necesitamos almacenar algo más, el lenguaje nos obliga a crear una nueva caja (declarar una nueva variable). No podemos reutilizar el viejo. Aunque pueda parecer un poco extraño a primera vista, estos idiomas son muy capaces de desarrollarse seriamente. Más que eso, hay áreas como los cálculos paralelos donde esta limitación confiere ciertos beneficios. Se recomienda estudiar este tipo de lenguaje (incluso si no está planeando usarlo pronto) para ampliar la mente.*
+
+Hay dos limitaciones a la hora de ponerle nombres a las variables: 
+
+1. Ha de contener solo letras, digitos, o el simbolo $ o _ 
+2. El primer caracter no puede ser un digito
+
+Cuando la variable contiene varios nombres, camelCase es lo más usado. 
+
+Es interesante saber que $ o _ son tratados como letras, por lo que:
+
+```javascript 
+let $ = 1; 
+let _ = 2; 
+```
+
+son perfectamente váidos. 
+
+Un ejemplo de variables mal escritas: 
+
+```javascript 
+
+let 1a; // cannot start with a digit
+
+let my-name; // hyphens '-' aren't allowed in the name
+```
+
+**Case matters**: variables llamadas apple y AppLE son dos diferentes variables. 
+
+**Non-English letters are allowed, but not recommended**: es posible utilizar cualquier lenguaje, no habiendo error alguno, pero existe una "tradicion" internacional para usar el inglés en el nombre de las variables. Esto se hace con la intención de que gente de otras culturas y páises lo puedan leer alguna vez. 
+
+**Reserved names**: Hay una lista de palabras reservadas, las cuales no pueden ser usadads como variables porque las utiliza el lenguaje por sí mismo.
+
+Por ejemplo: let, class, return y function son palabras reservadas. 
+
+El código a continuación nos dan un error de sintaxis: 
+
+```javascript
+let let = 5; // can't name a variable "let", error! 
+let return = 5; // also can't name it "return", error! 
+```
+
+**An assignment without use strict**: Normalmemente, necesitamos definir una variable antes de usuarla. Pero en los antiguos tiempos, tecnicamente era posible crear una variable por el mero asignamiento del valor sin necesidad de usar let. Esto sigue funcionando ahora sino podemos el 'use strict' en nuestros scripts para mantener la compatibilidad con los antiguos scripts. 
+
+```javascript 
+num = 5; // la varibale "num" ha sido creada si no existe 
+alert(num); // 5
+```
+
+Esto es una mala práctica, y causará un error si lo utilizamos en modo estricto: 
+
+```javascript 
+num = 5; // error: num is not defined 
+```
+
+## Variables constantes 
+
+Para declarar una constante variable, usaremos ``const `` en vez de ``let``: 
+
+```javascript 
+const myBirthday = "18.04.1982"; 
+```
+
+Las variables declaradas usando ``const`` son conocidas como "constantes". **No pueden ser cambiadas**. Cambiarlas supondría un error. 
+
+```javascript 
+const myBirthday = '18.04.1982';
+
+myBirthday = '01.01.2001'; // error, can't reassign the constant!
+```
+
+Cuando un programador está seguro de que una variable nunca va a cambiar, lo podemos declarar como const para garantizar y comunicar este hecho a todo el mundo. 
+
