@@ -202,4 +202,27 @@ El operador typeof nos permite ver que tipo está almacenado en una variable:
 - Nos devuelve un string con el nombre del type, como "string"
 - Para null nos devuelve "object". esto es un error del lenguaje. 
 
+```javascript
 
+let name = "Ilya";
+
+alert( `hello ${1}` ); // ?
+
+alert( `hello ${"name"}` ); // ?
+
+alert( `hello ${name}` ); // ?
+
+// OUTPUT
+
+let name = "Ilya";
+
+// the expression is a number 1
+alert( `hello ${1}` ); // hello 1
+
+// the expression is a string "name"
+alert( `hello ${"name"}` ); // hello name
+
+// the expression is a variable, embed it
+alert( `hello ${name}` ); // hello Ilya
+
+```
